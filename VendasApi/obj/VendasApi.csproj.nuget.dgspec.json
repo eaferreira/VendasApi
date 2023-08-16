@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Projetos\\WEB\\VendasApi\\VendasApi\\VendasApi.csproj": {}
+    "F:\\Projetos\\WEB\\Vendas\\VendasApi\\VendasApi\\VendasApi.csproj": {}
   },
   "projects": {
-    "F:\\Projetos\\WEB\\VendasApi\\VendasApi\\VendasApi.csproj": {
+    "F:\\Projetos\\WEB\\Vendas\\VendasApi\\VendasApi\\VendasApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Projetos\\WEB\\VendasApi\\VendasApi\\VendasApi.csproj",
+        "projectUniqueName": "F:\\Projetos\\WEB\\Vendas\\VendasApi\\VendasApi\\VendasApi.csproj",
         "projectName": "VendasApi",
-        "projectPath": "F:\\Projetos\\WEB\\VendasApi\\VendasApi\\VendasApi.csproj",
+        "projectPath": "F:\\Projetos\\WEB\\Vendas\\VendasApi\\VendasApi\\VendasApi.csproj",
         "packagesPath": "C:\\Users\\Konn\\.nuget\\packages\\",
-        "outputPath": "F:\\Projetos\\WEB\\VendasApi\\VendasApi\\obj\\",
+        "outputPath": "F:\\Projetos\\WEB\\Vendas\\VendasApi\\VendasApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "F:\\Programas\\Microsoft Visual Studio\\Shared\\NuGetPackages"
