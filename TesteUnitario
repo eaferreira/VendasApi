@@ -1,0 +1,301 @@
+Rota: https://localhost:44342/api/v1/Employee
+HTTP: GET
+Response:
+[
+  {
+    "id": 1,
+    "name": "Joaquim da Silva",
+    "documentNumber": "12345678900"
+  },
+  {
+    "id": 2,
+    "name": "Manoel Barbosa",
+    "documentNumber": "00987654321"
+  }
+]
+============================================================
+Rota: https://localhost:44342/api/v1/Product
+HTTP: GET
+Response:
+[
+  {
+    "id": 1,
+    "description": "O Robô Aspirador de Pó Smart 700 é equipado com Filtros de Alta Eficiência (HEPA), que é recomendado para alérgenos de mofo, poeira e ácaros. Além disso, é extremamente silencioso e causa pouquíssimos ruídos.",
+    "name": "Robô Aspirador de Pó Smart 700",
+    "price": 1349.9,
+    "quantity": 188,
+    "category": {
+      "id": 1,
+      "name": "Eletrônicos"
+    },
+    "createdDate": "2023-08-15T22:22:24.5770506-03:00",
+    "lastModified": "0001-01-01T00:00:00"
+  },
+  {
+    "id": 2,
+    "description": "Os meninos que enganavam nazistas conta a fantástica e emocionante epopeia de duas crianças judias durante a ocupação, narrada por Joseph, o mais jovem.",
+    "name": "Os meninos que enganavam nazistas",
+    "price": 29.12,
+    "quantity": 50,
+    "category": {
+      "id": 3,
+      "name": "Livros"
+    },
+    "createdDate": "2023-08-15T22:22:24.5779608-03:00",
+    "lastModified": "0001-01-01T00:00:00"
+  },
+  {
+    "id": 3,
+    "description": "Detroit: Become Human coloca o destino da humanidade e dos androides em suas mãos. Todas as suas escolhas afetam o resultado do jogo, com uma das narrativas mais intrinsecamente ramificadas já criadas.",
+    "name": "Detroit: Become Human",
+    "price": 134.99,
+    "quantity": 250,
+    "category": {
+      "id": 6,
+      "name": "Jogos"
+    },
+    "createdDate": "2023-08-15T22:22:24.5779663-03:00",
+    "lastModified": "0001-01-01T00:00:00"
+  }
+]
+============================================================
+Rota: https://localhost:44342/api/v1/Product/Categories
+HTTP: GET
+Response:
+[
+  {
+    "id": 1,
+    "name": "Eletrônicos"
+  },
+  {
+    "id": 2,
+    "name": "Alimentos"
+  },
+  {
+    "id": 3,
+    "name": "Livros"
+  },
+  {
+    "id": 4,
+    "name": "Automotivo"
+  },
+  {
+    "id": 5,
+    "name": "Esportes"
+  },
+  {
+    "id": 6,
+    "name": "Jogos"
+  }
+]
+============================================================
+Rota: https://localhost:44342/api/v1/Sales/PaymentStatus
+HTTP: GET
+Response:
+[
+  {
+    "id": 0,
+    "name": "Aprovado"
+  },
+  {
+    "id": 1,
+    "name": "Aguardando"
+  },
+  {
+    "id": 2,
+    "name": "Enviado"
+  },
+  {
+    "id": 3,
+    "name": "Entregue"
+  },
+  {
+    "id": 4,
+    "name": "Cancelado"
+  }
+]
+============================================================
+Rota: https://localhost:44342/api/v1/Sales
+HTTP: POST
+Request:
+{
+  "id": 0,
+  "items": [
+    {
+      "id": 2,
+      "quantity": 5
+    },
+    {
+      "id": 1,
+      "quantity": 2
+    }
+
+  ],
+  "employee": {
+    "id": 1,
+    "name": "string",
+    "documentNumber": "string"
+  }
+}
+Response:
+{
+  "id": 1,
+  "saleDate": "0001-01-01T00:00:00",
+  "totalAmount": 2845.4,
+  "customerName": null,
+  "items": [
+    {
+      "id": 2,
+      "name": "Os meninos que enganavam nazistas",
+      "price": 29.12,
+      "quantity": 5,
+      "createdDate": "2023-08-15T22:27:54.4323424-03:00"
+    },
+    {
+      "id": 1,
+      "name": "Robô Aspirador de Pó Smart 700",
+      "price": 1349.9,
+      "quantity": 2,
+      "createdDate": "2023-08-15T22:27:54.4330507-03:00"
+    }
+  ],
+  "employee": {
+    "id": 1,
+    "name": "string",
+    "documentNumber": "string"
+  },
+  "paymentStatus": 1
+}
+============================================================
+Rota: https://localhost:44342/api/v1/Sales
+HTTP: GET
+Response:
+[
+  {
+    "id": 1,
+    "saleDate": "0001-01-01T00:00:00",
+    "totalAmount": 2845.4,
+    "customerName": null,
+    "items": [
+      {
+        "id": 2,
+        "name": "Os meninos que enganavam nazistas",
+        "price": 29.12,
+        "quantity": 5,
+        "createdDate": "2023-08-15T22:27:54.4323424-03:00"
+      },
+      {
+        "id": 1,
+        "name": "Robô Aspirador de Pó Smart 700",
+        "price": 1349.9,
+        "quantity": 2,
+        "createdDate": "2023-08-15T22:27:54.4330507-03:00"
+      }
+    ],
+    "employee": {
+      "id": 1,
+      "name": "string",
+      "documentNumber": "string"
+    },
+    "paymentStatus": 1
+  },
+  {
+    "id": 2,
+    "saleDate": "0001-01-01T00:00:00",
+    "totalAmount": 2699.8,
+    "customerName": null,
+    "items": [
+      {
+        "id": 1,
+        "name": "Robô Aspirador de Pó Smart 700",
+        "price": 1349.9,
+        "quantity": 2,
+        "createdDate": "2023-08-15T22:31:02.0135249-03:00"
+      }
+    ],
+    "employee": {
+      "id": 1,
+      "name": "string",
+      "documentNumber": "string"
+    },
+    "paymentStatus": 1
+  }
+]
+============================================================
+Rota: https://localhost:44342/api/v1/Sales/2
+HTTP: GET
+Response:
+{
+  "id": 2,
+  "saleDate": "0001-01-01T00:00:00",
+  "totalAmount": 2699.8,
+  "customerName": null,
+  "items": [
+    {
+      "id": 1,
+      "name": "Robô Aspirador de Pó Smart 700",
+      "price": 1349.9,
+      "quantity": 2,
+      "createdDate": "2023-08-15T22:31:02.0135249-03:00"
+    }
+  ],
+  "employee": {
+    "id": 1,
+    "name": "string",
+    "documentNumber": "string"
+  },
+  "paymentStatus": 1
+}
+============================================================
+Rota: https://localhost:44342/api/v1/Sales/1
+HTTP: PATCH
+Request:
+{
+  "id": 1,
+  "paymentStatus": 2
+}
+Response:
+Error 400
+Não é possível alterar o status de Aguardando para Enviado. Verifique as regras:
+De pendente para aprovado ou cancelado;
+De aprovado para enviado ou cancelado;
+De enviado para entregue.
+
+Status: 0 - Aprovado; 1 - Aguardando; 2 - Enviado; 3 - Entregue; 4 - Cancelado
+============================================================
+Rota: https://localhost:44342/api/v1/Sales/1
+HTTP: PATCH
+Request:
+{
+  "id": 1,
+  "paymentStatus": 0
+}
+Response:
+{
+  "id": 1,
+  "saleDate": "0001-01-01T00:00:00",
+  "totalAmount": 2845.4,
+  "customerName": null,
+  "items": [
+    {
+      "id": 2,
+      "name": "Os meninos que enganavam nazistas",
+      "price": 29.12,
+      "quantity": 5,
+      "createdDate": "2023-08-15T22:27:54.4323424-03:00"
+    },
+    {
+      "id": 1,
+      "name": "Robô Aspirador de Pó Smart 700",
+      "price": 1349.9,
+      "quantity": 2,
+      "createdDate": "2023-08-15T22:27:54.4330507-03:00"
+    }
+  ],
+  "employee": {
+    "id": 1,
+    "name": "string",
+    "documentNumber": "string"
+  },
+  "paymentStatus": 0
+}
